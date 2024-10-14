@@ -22,4 +22,7 @@ from mysite import views
 urlpatterns = [
     path("admin-panel/", admin.site.urls),
     path("about-us/", views.aboutUS),
+    path("return/", views.returnfromhome),
+    path("return/<int:detailsid>", views.details),
+    path("return/<str:detailsid>", views.details),
 ]
