@@ -7,5 +7,23 @@
 </head>
 <body>
     <h1>{{body}}</h1>
+    {% for n in clist %}
+    <p>{{forloop.counter}}.{{n}}</p> 
+    <!-- forloop.counter0,forloop.revcounter,forloop.revcounter0,forloop.first,forloop.last can also be used -->
+    {% endfor %}
+
+    
+    <table border="1" cellpadding="10">
+        <tr >
+            <th>Name</th>
+            <th>Location</th>
+        </tr>
+       {%for d in details %}
+        <tr>
+            <td>{{d.name}}</td>
+            <td>{{d.location}}</td>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>

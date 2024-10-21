@@ -3,7 +3,15 @@ from django.shortcuts import render
 
 
 def homePage(request):
-    data = {"title": "Home Page", "body": "hello i am dinesh adhikair"}
+    data = {
+        "title": "Home Page",
+        "body": "hello i am dinesh adhikair",
+        "clist": ["php", "java", "python"],
+        "details": [
+            {"name": "dinesh adhikari", "location": "pokhara"},
+            {"name": "ajit adhikari", "location": "kathmandu"},
+        ],
+    }
     return render(request, "index.html", data)
 
 
