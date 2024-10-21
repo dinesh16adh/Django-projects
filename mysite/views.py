@@ -3,7 +3,8 @@ from django.shortcuts import render
 
 
 def homePage(request):
-    return render(request, "index.html")
+    data = {"title": "Home Page", "body": "hello i am dinesh adhikair"}
+    return render(request, "index.html", data)
 
 
 def aboutUS(request):
