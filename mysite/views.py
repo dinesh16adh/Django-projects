@@ -7,6 +7,8 @@ def homePage(request):
         "title": "Home Page",
         "body": "hello i am dinesh adhikair",
         "clist": ["php", "java", "python"],
+        "numbers": [10, 20, 30, 40],
+        "hello": [],
         "details": [
             {"name": "dinesh adhikari", "location": "pokhara"},
             {"name": "ajit adhikari", "location": "kathmandu"},

@@ -12,7 +12,6 @@
     <!-- forloop.counter0,forloop.revcounter,forloop.revcounter0,forloop.first,forloop.last can also be used -->
     {% endfor %}
 
-    
     <table border="1" cellpadding="10">
         <tr >
             <th>Name</th>
@@ -25,5 +24,28 @@
         </tr>
         {% endfor %}
     </table>
+
+    {% if numbers|length > 0 %}
+        {% for n in numbers %}
+
+            {% if n > 20%}
+                <div>{{n}}</div>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+       Don't found any data
+    {% endif %}
+
+    {% if hello|length > 0 %}
+        {% for n in hello %}
+            {% if n > 12 %}
+               {{n}}
+            {% endif %}
+        {% endfor %}
+    
+
+    {% else %}
+      <h1>don't found any data </h1>
+    {% endif %}
 </body>
 </html>
